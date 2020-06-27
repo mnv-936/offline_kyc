@@ -2,5 +2,9 @@
 
 {% block content %}
 
+<h3>Name = {{ customer.name }} </h3>
+<img src="data:image/png;base64,{{ customer.pht }}" alt="{{ customer.name }}" />
+<h3>Date of Birth = {{ customer.dob }} </h3>
+<h3>Address= {{ customer.address }}</h3>
 
 {% endblock %}

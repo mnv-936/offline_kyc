@@ -2,5 +2,23 @@
 
 {% block content %}
 
+<h1> Upload the zip file </h1>
+<br/>
+<div style="color:red">
+  {{ error }}
+</div>
+<br/>
+<div class="container">
+  <form method="POST" action="{% url 'upload_xml' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    zip file of aadhaar xml: <br/>
+    <input type="file" name="xml_zip"/>
+    <br/><br/>
+    Share Code: <br/>
+    <input type="number" name="share_code"/>
+    <br/><br/>
+    <input class="btn btn-primary" type="submit" value="Upload"/>
+  </form>
+</div>
 
 {% endblock %}
